@@ -1,0 +1,76 @@
+3.2.2 Find Maximum Element: Implement a function to find and return the maximum value
+in an integer array
+
+Code in NASM:
+
+section .text
+global find_max
+find_max:
+    ; Parameters:
+    ; rdi - pointer to the array
+    ; rsi - number of elements in the array
+
+    ; Check if the array has no elements (n == 0)
+    test rsi, rsi                ; Tests if n == 0
+    jz .empty                    ; If zero, jump to empty handling code
+
+    ; Initialize max with the value of the first element
+    mov rax, [rdi]               ; Move first element of the array into rax (max)
+
+    ; If there's only one element, return it
+    dec rsi                      ; Decrement n for loop (since we've read one element already)
+    jz .done                     ; If there are no more elements, return
+
+    ; Set up for loop to go through the array
+    xor rcx, rcx                ; Counter set to 0
+    add rcx, 1                  ; Start counter at 1 (second element)
+    shl rcx, 2                  ; rcx *= 4 (to use as an offset in the array addressing)
+
+.loop:
+    cmp rax, [rdi + rcx]         ; Compare max with the current element
+    jge .next                    ; If max is greater or equal, move to next
+    mov rax, [rdi + rcx]         ; Otherwise, update max
+.next:
+    add rcx, 4                   ; Move to the next element (4 bytes per element)
+    cmp rcx, rsi                 ; Compare counter with n (in bytes)
+    jl .loop                     ; If counter less than n, keep looping
+
+.done:
+    ret                          ; Return the max value in rax
+
+.empty:
+    ; Handling empty arrays by returning a default value (let's choose 0)
+    xor rax, rax                 ; Return 0 for empty array
+    ret
+
+Code in C:
+
+#include <stdio.h>
+
+int find_max(int *arr, int n) {
+    if (n == 0) {
+        return 0; // Return 0 for an empty array as a safe default
+    }
+
+    int max = arr[0]; // Initialize max with the first element of the array
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > max) {
+            max = arr[i]; // Update max if a larger element is found
+        }
+    }
+
+    return max; // Return the maximum found
+}
+
+int main() {
+    int array1[] = {23, 45, 67, 89, 12};
+    int size1 = sizeof(array1) / sizeof(array1[0]);
+
+    int array2[] = {-1, -3, -17, -2};
+    int size2 = sizeof(array2) / sizeof(array2[0]);
+
+    printf("Maximum in array 1 is: %d\n", find_max(array1, size1));
+    printf("Maximum in array 2 is: %d\n", find_max(array2, size2));
+
+    return 0;
+}

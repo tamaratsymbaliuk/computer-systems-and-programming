@@ -1,0 +1,70 @@
+3.2.4 (*) Reverse an Array: Write an function that takes an array and its length as
+arguments and reverses the order of its elements in place.
+
+Code in NASM:
+
+section .text
+global reverse_array
+reverse_array:
+    ; Parameters:
+    ; rdi - pointer to the array
+    ; rsi - number of elements in the array
+
+    ; Initialize pointers for swapping
+    mov rdx, rdi               ; Pointer to the start of the array
+    lea rcx, [rdi + rsi*4 - 4] ; Pointer to the end of the array (assuming 4-byte integers)
+
+    ; Start swapping loop
+swap_loop:
+    cmp rdx, rcx               ; Compare pointers
+    jge end_swap               ; If start pointer >= end pointer, end swapping
+
+    ; Swap the elements at *rdx and *rcx
+    mov eax, [rdx]             ; Load the start element
+    mov ebx, [rcx]             ; Load the end element
+    mov [rdx], ebx             ; Store the end element at the start
+    mov [rcx], eax             ; Store the start element at the end
+
+    ; Move pointers
+    add rdx, 4                 ; Move start pointer to the next element
+    sub rcx, 4                 ; Move end pointer to the previous element
+
+    ; Loop back
+    jmp swap_loop
+
+end_swap:
+    ret                        ; Return from the function
+
+Code in C:
+
+#include <stdio.h>
+
+void reverse_array(int *arr, int len) {
+    int temp;
+    for (int i = 0; i < len / 2; i++) {
+        temp = arr[i];
+        arr[i] = arr[len - 1 - i];
+        arr[len - 1 - i] = temp;
+    }
+}
+
+int main() {
+    int array[] = {1, 2, 3, 4, 5};
+    int len = sizeof(array) / sizeof(array[0]);
+
+    printf("Original array:\n");
+    for (int i = 0; i < len; i++) {
+        printf("%d ", array[i]);
+    }
+    printf("\n");
+
+    reverse_array(array, len);
+
+    printf("Reversed array:\n");
+    for (int i = 0; i < len; i++) {
+        printf("%d ", array[i]);
+    }
+    printf("\n");
+
+    return 0;
+}

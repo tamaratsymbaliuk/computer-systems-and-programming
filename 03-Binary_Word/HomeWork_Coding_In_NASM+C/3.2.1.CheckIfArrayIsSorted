@@ -1,0 +1,65 @@
+3.2.1 Check if Array is Sorted: Implement a function that checks whether an array is sorted
+in ascending order and returns a boolean value (0 for false, 1 for true)
+
+ NASM assembly code :
+
+ section .text
+ global is_sorted
+ is_sorted:
+     ; Function arguments:
+     ; rdi - pointer to the array (arr)
+     ; rsi - number of elements in the array (n)
+
+     cmp rsi, 1        ; Compare n to 1 (if n <= 1, array is sorted)
+     jle .sorted       ; Jump if less or equal to 1, meaning it's sorted
+
+     dec rsi           ; Decrement n for comparison loop (n-1 comparisons)
+     xor rcx, rcx      ; rcx will act as our index counter i = 0
+
+ .loop:
+     mov rax, [rdi + rcx*4]  ; Load current element arr[i] into rax
+     mov rdx, [rdi + rcx*4 + 4] ; Load next element arr[i+1] into rdx
+     cmp rax, rdx      ; Compare current element with next
+     jg .not_sorted    ; If current element > next element, it's not sorted
+     inc rcx           ; Increment index
+     cmp rcx, rsi      ; Compare index with n-1
+     jl .loop          ; Continue loop if index is less than n-1
+
+ .sorted:
+     mov eax, 1        ; Set return value to 1 (sorted)
+     ret               ; Return from function
+
+ .not_sorted:
+     xor eax, eax      ; Set return value to 0 (not sorted)
+     ret               ; Return from function
+
+Code in C:
+
+#include <stdbool.h>
+
+bool is_sorted(int *arr, int n) {
+    if (n <= 1) {
+        return true; // An array with 0 or 1 element is trivially sorted.
+    }
+
+    for (int i = 0; i < n - 1; i++) {
+        if (arr[i] > arr[i + 1]) {
+            return false; // Found a pair where the current item is greater than the next.
+        }
+    }
+
+    return true; // No such pair found, the array is sorted.
+}
+
+int main() {
+    int array1[] = {1, 2, 3, 4, 5};
+    int size1 = sizeof(array1) / sizeof(array1[0]);
+
+    int array2[] = {5, 3, 4, 1, 2};
+    int size2 = sizeof(array2) / sizeof(array2[0]);
+
+    printf("Array 1 is %s.\n", is_sorted(array1, size1) ? "sorted" : "not sorted");
+    printf("Array 2 is %s.\n", is_sorted(array2, size2) ? "sorted" : "not sorted");
+
+    return 0;
+}

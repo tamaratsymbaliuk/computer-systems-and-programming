@@ -1,0 +1,62 @@
+3.2.3 Linear Search: Write a function that performs a linear search on an array. The function
+should return the index of the first occurrence of a specified value, or -1 if the value is not
+found
+
+section .text
+global linear_search
+linear_search:
+    ; Parameters:
+    ; rdi - pointer to the array
+    ; rsi - number of elements in the array
+    ; rdx - the value to search for
+
+    ; Check if the array is empty (n == 0)
+    test rsi, rsi                    ; Tests if n == 0
+    jz .not_found                    ; If zero, jump to not_found
+
+    ; Initialize index (in rcx) to 0
+    xor rcx, rcx                     ; Index of current element
+
+.search_loop:
+    cmp [rdi + rcx * 4], rdx         ; Compare current array element with value
+    je .found                        ; If equal, jump to found
+    inc rcx                          ; Increment index
+    cmp rcx, rsi                     ; Compare index with n
+    jl .search_loop                  ; If index is less than n, continue loop
+
+.not_found:
+    mov rax, -1                      ; Return -1 (value not found)
+    ret
+
+.found:
+    mov rax, rcx                     ; Return the current index
+    ret
+
+
+Code in C:
+
+#include <stdio.h>
+
+int linear_search(int *arr, int n, int value) {
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == value) {
+            return i; // Return the index of the element if found
+        }
+    }
+    return -1; // Return -1 if the element is not found
+}
+
+int main() {
+    int array[] = {3, 5, 7, 9, 11};
+    int size = sizeof(array) / sizeof(array[0]);
+    int target = 7;
+
+    int index = linear_search(array, size, target);
+    if (index != -1) {
+        printf("Element %d found at index %d.\n", target, index);
+    } else {
+        printf("Element %d not found in the array.\n", target);
+    }
+
+    return 0;
+}

@@ -1,0 +1,46 @@
+do _sth:
+mov rax, [rdi]
+mov rbx, [rsi]
+mov [rdi], rbx
+mov [rsi], rax
+ret
+__________________________
+
+do_sth:
+mov eax, [rdi]
+xor eax, [rsi]
+xor [rsi], eax
+xor [rdi], eax
+ret
+
+Identity:
+A^0=A
+Invertibility:
+A^A=0
+Commutativity:
+A^B=B^A
+Associativity:
+(A^B)^C=A^(B^C)
+
+_______________________________
+
+
+; rdi - array, rsi - array length
+; what does ‘do_sth’ do?
+
+do_sth:
+xor rax, rax
+xor rcx, rcx
+start_loop:
+cmp rcx, rsi
+jge end_loop
+mov rdx, [rdi + rcx*4]
+and rdx, 1
+jz next_element
+add rax, [rdi + rcx*4]
+next_element:
+inc rcx
+jmp start_loop
+end_loop:
+ret
+

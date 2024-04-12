@@ -1,0 +1,16 @@
+offset = base_address + (index * element_size)
+
+- base_address is the starting address of the array.
+- index is the position of the element in the array, typically starting from 0.
+- element_size is the size of each element in the array, which depends on the
+data type (e.g., 1 byte for char, 4 bytes for int in 32-bit systems, 8 bytes for int
+in 64-bit systems, etc.).
+
+Example of accessing arrays in NASM
+array dd 10, 20, 30, 40, 50 ; An array of 32-bit integers
+....
+mov esi, array
+; Assume we want to access the 3rd element (index 2), element size is 4 bytes
+; Calculate the offset: 2 * 4 = 8
+; Add the offset to the base address
+mov eax, [esi + 8] ; eax now contains the 3rd element of the array (30)

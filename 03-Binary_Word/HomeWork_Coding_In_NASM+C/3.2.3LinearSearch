@@ -37,25 +37,30 @@ Code in C:
 
 #include <stdio.h>
 
-int linear_search(int *arr, int n, int value) {
-    for (int i = 0; i < n; i++) {
-        if (arr[i] == value) {
-            return i; // Return the index of the element if found
+int linear_search(int *arr, int len, int value) {
+    int *ptr = arr; // Pointer to the start of the array
+    int index = 0;  // Index tracker
+
+    while (ptr < arr + len) { // Iterate over the array
+        if (*ptr == value) { // Compare the current element to the value
+            return index; // Return the current index if the value matches
         }
+        ptr++; // Move the pointer to the next element
+        index++; // Increment the index
     }
-    return -1; // Return -1 if the element is not found
+    return -1; // Return -1 if the value is not found
 }
 
 int main() {
-    int array[] = {3, 5, 7, 9, 11};
-    int size = sizeof(array) / sizeof(array[0]);
-    int target = 7;
+    int array[] = {5, 3, 7, 9, 2};
+    int len = sizeof(array) / sizeof(array[0]);
+    int value_to_find = 7;
 
-    int index = linear_search(array, size, target);
-    if (index != -1) {
-        printf("Element %d found at index %d.\n", target, index);
+    int result = linear_search(array, len, value_to_find);
+    if (result != -1) {
+        printf("Value %d found at index %d.\n", value_to_find, result);
     } else {
-        printf("Element %d not found in the array.\n", target);
+        printf("Value %d not found in the array.\n", value_to_find);
     }
 
     return 0;

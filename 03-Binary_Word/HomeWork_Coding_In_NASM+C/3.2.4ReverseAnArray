@@ -40,11 +40,16 @@ Code in C:
 #include <stdio.h>
 
 void reverse_array(int *arr, int len) {
-    int temp;
-    for (int i = 0; i < len / 2; i++) {
-        temp = arr[i];
-        arr[i] = arr[len - 1 - i];
-        arr[len - 1 - i] = temp;
+    int *start_ptr = arr;                   // Pointer to the start of the array
+    int *end_ptr = arr + len - 1;           // Pointer to the end of the array
+    int temp;                               // Temporary variable for swapping
+
+    while (start_ptr < end_ptr) {           // Continue until the two pointers meet in the middle
+        temp = *start_ptr;                  // Save the value at start_ptr in temp
+        *start_ptr = *end_ptr;              // Set the value at start_ptr to the value at end_ptr
+        *end_ptr = temp;                    // Set the value at end_ptr to the value stored in temp
+        start_ptr++;                        // Move the start pointer one element to the right
+        end_ptr--;                          // Move the end pointer one element to the left
     }
 }
 

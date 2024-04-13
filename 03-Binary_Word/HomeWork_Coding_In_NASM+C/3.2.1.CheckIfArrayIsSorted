@@ -35,31 +35,30 @@ in ascending order and returns a boolean value (0 for false, 1 for true)
 
 Code in C:
 
-#include <stdbool.h>
+#include <stdio.h>
 
-bool is_sorted(int *arr, int n) {
-    if (n <= 1) {
-        return true; // An array with 0 or 1 element is trivially sorted.
-    }
+int is_sorted(int *arr, int len) {
+    int *ptr = arr; // Pointer to the start of the array
 
-    for (int i = 0; i < n - 1; i++) {
-        if (arr[i] > arr[i + 1]) {
-            return false; // Found a pair where the current item is greater than the next.
+    // Traverse the array using a pointer, comparing each element with the next
+    while (ptr < arr + len - 1) { // Check up to the second last element
+        if (*ptr > *(ptr + 1)) { // Compare current element with the next element
+            return 0; // Return 0 (false) if the current element is greater than the next
         }
+        ptr++; // Move to the next element
     }
-
-    return true; // No such pair found, the array is sorted.
+    return 1; // Return 1 (true) if no elements are out of order
 }
 
 int main() {
-    int array1[] = {1, 2, 3, 4, 5};
-    int size1 = sizeof(array1) / sizeof(array1[0]);
+    int array[] = {1, 2, 3, 4, 5};
+    int len = sizeof(array) / sizeof(array[0]);
 
-    int array2[] = {5, 3, 4, 1, 2};
-    int size2 = sizeof(array2) / sizeof(array2[0]);
-
-    printf("Array 1 is %s.\n", is_sorted(array1, size1) ? "sorted" : "not sorted");
-    printf("Array 2 is %s.\n", is_sorted(array2, size2) ? "sorted" : "not sorted");
+    if (is_sorted(array, len)) {
+        printf("The array is sorted.\n");
+    } else {
+        printf("The array is not sorted.\n");
+    }
 
     return 0;
 }

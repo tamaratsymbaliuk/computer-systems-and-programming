@@ -1,6 +1,24 @@
 3.2.2 Find Maximum Element: Implement a function to find and return the maximum value
 in an integer array
 
+C lang:
+
+int *ptr = arr;   // Declare a pointer 'ptr' and initialize it to point at the beginning of the array 'arr'.
+int max = *ptr;   // Initialize 'max' to the value pointed by 'ptr', which is the first element of the array.
+
+start_loop:       // A label used for the 'goto' statement, marking the beginning of the loop.
+if (ptr < arr + len) { // Check if the pointer 'ptr' is still within the array bounds.
+    if (*ptr > max) {  // Dereference 'ptr' to get the current element and compare it with 'max'.
+        max = *ptr;    // If the current element is greater than 'max', update 'max' to this new value.
+    }
+
+    ptr++;             // Increment the pointer to move to the next element in the array.
+    goto start_loop;   // Unconditionally jump back to the 'start_loop' label, effectively creating a loop.
+}
+
+
+
+
 Code in NASM:
 
 section .text

@@ -1,6 +1,7 @@
 package Homework_Coding_in_Java_and_Python;
 
 public class SumAnArray {
+
     public static void main(String[] args) {
 
 

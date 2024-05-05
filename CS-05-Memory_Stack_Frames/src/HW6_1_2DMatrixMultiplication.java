@@ -1,14 +1,16 @@
 public class HW6_1_2DMatrixMultiplication {
 
+    //products of row of the first matrix with the each column of the second matrix
+
     public static void main(String[] args) {
 
         int[][] matrix1 = {
-                {1, 2, 3},
+                {4, 2, 6},
                 {4, 5, 6},
                 {1, 3, 2}
         };
         int[][] matrix2 = {
-                {1, 2, 3},
+                {3, 6, 4},
                 {3, 4, 5},
                 {5, 6, 7}
         };

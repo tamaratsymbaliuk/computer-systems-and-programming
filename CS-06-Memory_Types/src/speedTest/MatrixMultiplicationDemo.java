@@ -13,7 +13,7 @@ public class MatrixMultiplicationDemo {
         int l = 2;
 
         int[][] m1 = generateMatrixWithRandomNumbers(n,m);
-        int[][] m2 = generateMatrixWithRandomNumbers(n,l);
+        int[][] m2 = generateMatrixWithRandomNumbers(m,l);
 
         int[][] baseResult = new int[n][l];
         MatrixMultiplication.multiplyMatrices(m1, m2, baseResult);

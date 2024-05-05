@@ -21,6 +21,20 @@ public class MatrixMultiplicationDemo {
         printMatrix(m1,"M1");
         printMatrix(m2,"M2");
         printMatrix(baseResult,"Result");
+
+        int[][] m2Transposed = MatrixMultiplication.transposeMatrix(m2);
+        int[][] resultTransposed = new int[n][l];
+        MatrixMultiplication.multiplyMatricesTransposed(m1, m2Transposed, resultTransposed);
+
+        int[][] resultBlock = new int[n][l];
+        MatrixMultiplication.multiplyMatricesBlock(m1, m2, resultBlock, BLOCK_SIZE);
+
+        int[][] resultTransposeBlock = new int[n][l];
+        MatrixMultiplication.multiplyMatricesTransposeBlock(m1, m2Transposed, resultTransposeBlock, BLOCK_SIZE);
+
+        assertEquality(baseResult,"R", resultTransposed, "TransposedR");
+        assertEquality(baseResult, "R", resultBlock, "Block");
+        assertEquality(baseResult, "R", resultTransposeBlock, "TransposedBlock");
     }
 
     public static boolean areMatricesEqual(int[][] matrix1, int[][] matrix2) {

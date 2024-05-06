@@ -11,9 +11,9 @@ public class MatrixMultiplicationSpeedTest {
     public static final int TIME_FACTOR = 1000000;
 
     public static void main(String[] args) {
-        int n = 5000;
-        int m = 2000;
-        int l = 5000;
+        int n = 1000;
+        int m = 500;
+        int l = 1000;
 
         int[][] m1 = generateMatrixWithRandomNumbers(n,m);
         int[][] m2 = generateMatrixWithRandomNumbers(m,l);
@@ -26,19 +26,19 @@ public class MatrixMultiplicationSpeedTest {
 
         long duration1 = averageExecutionTime(() ->
                 multiplyMatrices(m1, m2, baseResult), ITERATION_COUNT);
-        System.out.println("Execution time of method1: " + duration1 / TIME_FACTOR + " ns");
-
-        long duration2 = averageExecutionTime(() ->
-                multiplyMatricesBlock(m1, m2, resultBlock, BLOCK_SIZE), ITERATION_COUNT);
-        System.out.println("Execution time of method3: " + duration2 / TIME_FACTOR + " ns");
+        System.out.println("Execution time of method1  multiplyMatrices: " + duration1 / TIME_FACTOR + " ns");
 
         long duration3 = averageExecutionTime(() ->
                 multiplyMatricesTransposed(m1, m2Transposed, resultTransposed), ITERATION_COUNT);
-        System.out.println("Execution time of method2: " + duration3 / TIME_FACTOR + " ns");
+        System.out.println("Execution time of method2 multiplyMatricesTransposed: " + duration3 / TIME_FACTOR + " ns");
+
+        long duration2 = averageExecutionTime(() ->
+                multiplyMatricesBlock(m1, m2, resultBlock, BLOCK_SIZE), ITERATION_COUNT);
+        System.out.println("Execution time of method3: multiplyMatricesBlock " + duration2 / TIME_FACTOR + " ns");
 
         long duration4 = averageExecutionTime(() ->
                 multiplyMatricesTransposeBlock(m1, m2Transposed, resultTransposeBlock, BLOCK_SIZE), ITERATION_COUNT);
-        System.out.println("Execution time of method4: " + duration4 / TIME_FACTOR + " ns");
+        System.out.println("Execution time of method4 multiplyMatricesTransposeBlock: " + duration4 / TIME_FACTOR + " ns");
 
     }
 

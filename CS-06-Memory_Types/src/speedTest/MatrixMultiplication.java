@@ -10,13 +10,17 @@ public class MatrixMultiplication {
         for (int i = 0; i < rowsA; i++) {
             for (int j = 0; j < colsB; j++) {
                 for (int k = 0; k < colsA; k++) {
-                    result[i][j] += matrixA[i][k] * matrixB[k][j];
-                }
-            }
-        }
+                    result[i][j] += matrixA[i][k] * matrixB[k][j];    //0 1 2 3 *
+                }                                                    // 1
+            }                                                        // 2
+        }                                                            // 3
     }
 
-    public static void multiplyMatricesTransposed(
+    public static void multiplyMatricesTransposed( //Transposing - converting the rows of a matrix into columns and vice versa
+                                                   //so now we need a row from first and a row for second which is much faster
+                                                   // than accesing rows from first and columns from second
+                                                   //transposed method can keep all arrays in 1 memory (ex. L1). basic multiplication can not fit too many arrays so it access different
+                                                   //memory types which is much more time-consuming
             int[][] matrixA, int[][] transposedMatrixB, int[][] result) {
         int rowsA = matrixA.length;
         int colsA = matrixA[0].length;

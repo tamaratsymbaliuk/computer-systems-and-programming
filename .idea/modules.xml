@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/CS-01-NASM/CS-01-NASM.iml" filepath="$PROJECT_DIR$/CS-01-NASM/CS-01-NASM.iml" />
       <module fileurl="file://$PROJECT_DIR$/CS-04-Values_and_References/CS-04-Values_and_References.iml" filepath="$PROJECT_DIR$/CS-04-Values_and_References/CS-04-Values_and_References.iml" />
       <module fileurl="file://$PROJECT_DIR$/CS-05-Memory_Stack_Frames/CS-05-Memory_Stack_Frames.iml" filepath="$PROJECT_DIR$/CS-05-Memory_Stack_Frames/CS-05-Memory_Stack_Frames.iml" />
       <module fileurl="file://$PROJECT_DIR$/CS-06-Memory_Types/CS-06-Memory_Types.iml" filepath="$PROJECT_DIR$/CS-06-Memory_Types/CS-06-Memory_Types.iml" />

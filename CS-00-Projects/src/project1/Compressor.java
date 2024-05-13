@@ -5,13 +5,13 @@ import java.io.*;
 public class Compressor {
     private static int code = 1; // Starting from 1 for readability
 
-    public static void main(String[] args) {
-        try {
-            new Compressor().compress("data/test.txt", "not done");
-        } catch (IOException e) {
-            System.err.println("There was an error:" + e.getLocalizedMessage());
-        }
-    }
+    // public static void main(String[] args) {
+    //     try {
+    //         new Compressor().compress("data/test.txt", "not done");
+    //     } catch (IOException e) {
+    //         System.err.println("There was an error:" + e.getLocalizedMessage());
+    //     }
+    // }
 
     public void compress(String inputFile, String compressedFile) throws IOException {
         // Convert the String data to a ByteArrayInputStream

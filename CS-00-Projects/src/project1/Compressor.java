@@ -16,7 +16,7 @@ public class Compressor {
         }
     }
 
-    public void compress(String inputFile, String outputFile) throws IOException {
+    public void compress(String inputFile, String compressedFile) throws IOException {
         try (BufferedReader reader = new BufferedReader(new FileReader(inputFile))) {
         String line = "";
         while (line != null) {

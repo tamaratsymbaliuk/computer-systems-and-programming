@@ -1,30 +1,37 @@
 package project1;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 public class Compressor {
+    private static int code = 1; // Starting from 1 for readability
+
     public static void main(String[] args) {
         try {
             new Compressor().compress("data/test.txt", "not done");
         } catch (IOException e) {
-            System.out.println("Current working directory: " + System.getProperty("user.dir"));
-
             System.err.println("There was an error:" + e.getLocalizedMessage());
         }
     }
 
     public void compress(String inputFile, String compressedFile) throws IOException {
-        try (BufferedReader reader = new BufferedReader(new FileReader(inputFile))) {
+        // Convert the String data to a ByteArrayInputStream
+        ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(inputFile.getBytes());
+        // Wrap the ByteArrayInputStream with an InputStreamReader to convert bytes to characters
+        InputStreamReader inputStreamReader = new InputStreamReader(byteArrayInputStream);
+        // Finally, wrap the InputStreamReader with a BufferedReader
+        BufferedReader reader = new BufferedReader(inputStreamReader);
+
         String line = "";
+        StringBuilder compressed = new StringBuilder();
         while (line != null) {
             line = reader.readLine();
-            System.out.println(line);
+            // Simple compression logic: For each unique line, assign a unique code.
+            compressed.append(code++).append(": ").append(line).append(System.lineSeparator());
         }
-    } catch (FileNotFoundException e) {
-        System.out.println(e.getLocalizedMessage());
+        // Write compressed data to file
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(compressedFile))) {
+            writer.write(compressed.toString());
+        }
     }
   }
-}
+

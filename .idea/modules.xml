@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/CS-00-Projects/CS-00-Projects.iml" filepath="$PROJECT_DIR$/CS-00-Projects/CS-00-Projects.iml" />
       <module fileurl="file://$PROJECT_DIR$/CS-01-NASM/CS-01-NASM.iml" filepath="$PROJECT_DIR$/CS-01-NASM/CS-01-NASM.iml" />
       <module fileurl="file://$PROJECT_DIR$/CS-02-LLVM-IR/CS-02-LLVM-IR.iml" filepath="$PROJECT_DIR$/CS-02-LLVM-IR/CS-02-LLVM-IR.iml" />
       <module fileurl="file://$PROJECT_DIR$/CS-03-Binary_World/CS-03-Binary_World.iml" filepath="$PROJECT_DIR$/CS-03-Binary_World/CS-03-Binary_World.iml" />

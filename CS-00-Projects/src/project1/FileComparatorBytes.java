@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class FileComparatorBytes {
-    // Compare each byte of two files input.txt vs readable.txt
+
     public boolean compareFiles(String input, String readable) throws IOException {
         try (InputStream is1 = new FileInputStream(input);
              InputStream is2 = new FileInputStream(readable)) {

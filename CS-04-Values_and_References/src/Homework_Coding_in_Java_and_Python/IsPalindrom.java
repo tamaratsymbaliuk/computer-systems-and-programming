@@ -22,7 +22,7 @@ public class IsPalindrom {
     }
 
     public static void main(String[] args) {
-        String word= "level";
+        String word= "level"; // test
         IsPalindrom test = new IsPalindrom();
         boolean result = test.checkIfStringIsPalindrom(word);
         System.out.println(result);

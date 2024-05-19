@@ -26,12 +26,16 @@ public class CompressionControllerMain {
             System.out.println("Original file size: " + originalSize + " bytes");
             System.out.println("Compressed file size: " + compressedSize + " bytes");
 
-            // Optionally, print the contents of the compressed file
-            String compressedData = new String(Files.readAllBytes(Paths.get(compressedFilePath)));
-            System.out.println("Compressed data:\n" + compressedData);
+            // Print the bytes of the compressed file
+            byte[] compressedBytes = Files.readAllBytes(Paths.get(compressedFilePath));
+            System.out.println("Compressed file bytes:");
+            for (byte b : compressedBytes) {
+                System.out.printf("%02x ", b);
+            }
+            System.out.println();
 
             // Decompress the compressed data
-            decompressor.decompress(compressedData, decompressedFilePath);
+            decompressor.decompress(compressedFilePath, decompressedFilePath);
 
             // Compare the original input and the decompressed output
             boolean areFilesIdentical = comparator.compareFiles(inputFilePath, decompressedFilePath);

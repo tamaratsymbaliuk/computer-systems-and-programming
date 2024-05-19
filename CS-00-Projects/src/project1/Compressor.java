@@ -1,9 +1,12 @@
 package project1;
 
 import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Compressor {
     private static int code = 1; // Starting from 1 for readability
+    private Map<String, Integer> wordToCodeMap = new HashMap<>(); // Mapping of words to codes
 
     // public static void main(String[] args) {
     //     try {
@@ -22,16 +25,32 @@ public class Compressor {
         BufferedReader reader = new BufferedReader(inputStreamReader);
 
         String line = "";
+        // Add the mapping to the compressed file content
         StringBuilder compressed = new StringBuilder();
-        while (line != null) {
-            line = reader.readLine();
-            // Simple compression logic: For each unique line, assign a unique code.
-            compressed.append(code++).append(": ").append(line).append(System.lineSeparator());
+
+        // Add the mapping to the compressed file content
+        StringBuilder mapping = new StringBuilder();
+        while ((line = reader.readLine()) != null) {
+            String[] words = line.split("\\s+"); // Split line into words
+            for (String word : words) {
+                if (!wordToCodeMap.containsKey(word)) {
+                    wordToCodeMap.put(word, code++);
+                }
+                compressed.append(wordToCodeMap.get(word)).append(" ");
+            }
+            compressed.append(System.lineSeparator());
         }
-        // Write compressed data to file
+
+        // Write the mapping and compressed data to the file
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(compressedFile))) {
+            writer.write("Mapping:\n");
+            for (Map.Entry<String, Integer> entry : wordToCodeMap.entrySet()) {
+                writer.write(entry.getValue() + ": " + entry.getKey());
+                writer.newLine();
+            }
+            writer.write("Compressed Data:\n");
             writer.write(compressed.toString());
         }
     }
-  }
+}
 

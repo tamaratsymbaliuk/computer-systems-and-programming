@@ -6,25 +6,42 @@ import java.util.Map;
 
 public class Decompressor {
     public void decompress(String compressedFile, String decompressedFile) throws IOException {
-        ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(compressedFile.getBytes());
-        BufferedReader reader = new BufferedReader(new InputStreamReader(byteArrayInputStream));
-        Map<Integer, String> reverseDictionary = new HashMap<>();
-        String line;
-        StringBuilder decompressed = new StringBuilder();
+        try (BufferedReader reader = new BufferedReader(new FileReader(compressedFile))) {
+            Map<Integer, String> codeToWordMap = new HashMap<>();
+            StringBuilder decompressed = new StringBuilder();
+            boolean readingMapping = true;
 
-        while ((line = reader.readLine()) != null) {
-            String[] parts = line.split(": ");
-            int code = Integer.parseInt(parts[0]);
-            String text = parts[1];
-            reverseDictionary.put(code, text);
-            decompressed.append(text).append(System.lineSeparator());
-        }
+            String line;
+            while ((line = reader.readLine()) != null) {
+                if (line.equals("Compressed Data:")) {
+                    readingMapping = false;
+                    continue;
+                }
 
-        // Write decompressed data to file
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(decompressedFile))) {
-            writer.write(decompressed.toString());
+                if (readingMapping) {
+                    if (line.startsWith("Mapping:") || line.isBlank()) {
+                        continue;
+                    }
+                    String[] parts = line.split(": ", 2);
+                    int code = Integer.parseInt(parts[0]);
+                    String word = parts[1];
+                    codeToWordMap.put(code, word);
+                } else {
+                    String[] codes = line.split("\\s+");
+                    for (String codeStr : codes) {
+                        if (!codeStr.isEmpty()) {
+                            int code = Integer.parseInt(codeStr);
+                            decompressed.append(codeToWordMap.get(code)).append(" ");
+                        }
+                    }
+                    decompressed.append(System.lineSeparator());
+                }
+            }
+
+            // Write decompressed data to file
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(decompressedFile))) {
+                writer.write(decompressed.toString());
+            }
         }
     }
-    }
-
-
+}

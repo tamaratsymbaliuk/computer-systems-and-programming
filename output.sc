@@ -1,131 +1,130 @@
 Mapping:
-246: 
-339: stupid
-269: been
+338: stupid
+268: been
 214: half
-267: sight.
+266: sight.
 166: mixing
-356: together.
-290: couldn't
+355: together.
+289: couldn't
 220: kiss
-430: lunchtime,
-425: shouted
-349: these
+429: lunchtime,
+424: shouted
+348: these
 118: would
-335: people!
-434: legs
+334: people!
+433: legs
 44: mysterious,
 45: because
-421: people.
+420: people.
 30: you
 140: sister
 211: past
-350: weirdos
-299: mind.
-367: an
+349: weirdos
+298: mind.
+366: an
 84: as
 228: at
 234: left
 107: finer
 187: happening
-287: looking
-263: tabby
-308: day.
+286: looking
+262: tabby
+307: day.
 88: much
 38: be
 145: be.
-346: eyes
+345: eyes
 9: THE
 98: The
 150: arrived
-279: As
-358: see
+278: As
+357: see
 213: At
-314: by
+313: by
 94: fences,
-411: after
-416: however,
-352: close
+410: after
+415: however,
+351: close
 55: a
-313: mind
+312: mind
 120: it.
 163: keeping
 208: tawny
-341: fashion.
+340: fashion.
 144: possible
 4: the
-375: stunt
+374: stunt
 229: t
-424: calls
+423: calls
 29: thank
 71: did
-359: couple
-378: something...
-380: moved
+358: couple
+377: something...
+379: moved
 12: LIVED
 76: blonde
 146: shuddered
 6: Stone
 161: good
 236: got
-405: down
+404: down
 48: hold
 195: tie
-348: huddle
+347: huddle
 232: tyke,"
-288: sign;
+287: sign;
 91: craning
 59: which
-253: For
+252: For
 225: tantrum
 42: strange
-415: nighttime.
+414: nighttime.
 85: she
 155: never
 239: four's
-336: supposed
+335: supposed
 66: hardly
-276: stared
-354: whispering
+275: stared
+353: whispering
 83: useful
 167: child
-296: little
-338: some
-334: young
+295: little
+337: some
+333: young
 135: for
 204: chair.None
-387: back
+386: back
 222: missed,because
-433: stretch
+432: stretch
 190: hummed
 46: just
 92: over
-319: jam,
-327: People
-366: wearing
-344: steering
-376: obviously
-397: concentrate
+318: jam,
+326: People
+365: wearing
+343: steering
+375: obviously
+396: concentrate
 153: son,
 49: with
 69: although
 105: there
-248: peculiar
+247: peculiar
 70: he
 31: very
 57: called
-426: bit
+425: bit
 186: soon
 17: number
 97: neighbors.
 219: tried
 242: corner
-324: strangely
-372: struck
+323: strangely
+371: struck
 62: He
 125: if
 116: fear
-304: order
+303: order
 181: sky
 73: large
 40: in
@@ -134,312 +133,312 @@ Mapping:
 179: nothing
 124: it
 117: somebody
-360: weren't
+359: weren't
 199: happily
-306: hoping
+305: hoping
 156: even
-312: driven
-294: gave
-393: If
+311: driven
+293: gave
+392: If
 64: beefy
-369: cloak!
+368: cloak!
 19: Privet
-271: of?
+270: of?
 241: It
-311: town,
+310: town,
 133: hadn't
-270: thinking
-427: more.
-362: why,
+269: thinking
+426: more.
+361: why,
 72: have
 65: man
-399: owls
+398: owls
 110: everything
-266: map
-326: about.
+265: map
+325: about.
 52: Dursley
-322: seemed
+321: seemed
 122: could
 152: knew
 154: too,
-409: open-
+408: open-
 218: cheek,
-297: shake
+296: shake
 207: large,
 136: several
 245: sign
-390: office
+389: office
 68: neck,
 25: that
 111: wanted,
 203: high
-310: edge
+309: edge
 101: son
 191: picked
-392: floor.
-364: than
-351: quite
-420: different
-318: traffic
+391: floor.
+363: than
+350: quite
+419: different
+317: traffic
 188: all
-249: --
-388: always
-340: new
-291: read
+248: --
+387: always
+339: new
+290: read
 15: Dursley,
-280: drove
+279: drove
 47: didn't
 10: BOY
-278: back.
+277: back.
 21: were
-410: mouthed
+409: mouthed
 106: no
 173: dull,
 102: Dudley
 61: drills.
-273: trick
+272: trick
 108: boy
-259: around
-258: head
+258: around
+257: head
 3: and
 16: of
-396: harder
+395: harder
 134: met
 96: on
 43: or
-345: wheel
+344: wheel
 139: pretended
 67: any
-441: bakery.
+440: bakery.
 169: that.
-391: ninth
+390: ninth
 196: work,
-429: until
-435: walk
+428: until
+434: walk
 230: walls.
 162: reason
-302: thought
+301: thought
 171: woke
 95: spying
 129: about
-265: wasn't
+264: wasn't
 56: firm
 114: secret,
 158: him.
 18: four,
 99: Dursleys
-379: yes,
+378: yes,
 26: they
-371: him!
+370: him!
 165: want
 205: them
-256: then
-247: something
-317: morning
-407: pointed
-295: himself
-272: must
-303: except
+255: then
+246: something
+316: morning
+406: pointed
+294: himself
+271: must
+302: except
 27: perfectly
-373: probably
+372: probably
 8: ONE
 160: another
-377: collecting
+376: collecting
 157: seen
-347: fell
-403: daylight,
+346: fell
+402: daylight,
 130: Potters.
 202: into
 212: window.
 127: found
 174: gray
-365: was,
+364: was,
 82: came
 87: so
-330: funny
-309: But
+329: funny
+308: But
 121: think
-252: map.
-305: drills
-404: though
-374: silly
+251: map.
+304: drills
+403: though
+373: silly
 206: noticed
 35: people
 33: They
 50: such
 194: boring
-264: standing
-328: cloaks.
+263: standing
+327: cloaks.
 200: wrestled
-439: bun
+438: bun
 23: to
 177: story
 112: but
 20: Drive,
 164: away;
 14: Mrs.
-438: buy
+437: buy
 77: had
 138: fact,
-286: no,
+285: no,
 189: country.
-275: blinked
-262: There
+274: blinked
+261: There
 148: neighbors
-361: all;
+360: all;
 185: things
 159: This
-285: Drive
+284: Drive
 172: up
-419: five
-255: realize
+418: five
+254: realize
 217: pecked
 1: Harry
 34: last
 80: usual
-292: maps
-301: town
-395: might
-408: gazed
-337: this
-423: telephone
-260: look
-293: signs.
+291: maps
+300: town
+394: might
+407: gazed
+336: this
+422: telephone
+259: look
+292: signs.
 75: thin
 201: screaming
 210: flutter
-282: watched
+281: watched
 39: involved
 216: briefcase,
-353: by.
-394: hadn't,
+352: by.
+393: hadn't,
 198: away
-428: mood
+427: mood
 235: house.
 78: nearly
-386: lot,
-268: What
+385: lot,
+267: What
 41: anything
-368: emerald-green
+367: emerald-green
 243: street
 223: now
 175: Tuesday
 53: was
-251: reading
-432: he'd
+250: reading
+431: he'd
 58: Grunnings,
 141: good-for-nothing
 147: what
 7: CHAPTER
 28: normal,
-257: jerked
+256: jerked
 74: mustache.
 240: drive.
-383: later,
+382: later,
 90: time
-389: window
-385: parking
+388: window
+384: parking
 63: big,
 238: backed
 13: Mr.
-343: fingers
-431: when
-298: put
+342: fingers
+430: when
+297: put
 178: starts,
 137: years;
 89: her
-437: road
-418: yelled
-402: broad
+436: road
+417: yelled
+401: broad
 2: Potter
-400: swoop
+399: swoop
 224: having
 131: Dursley's
 5: Sorcerer's
-325: dressed
+324: dressed
 215: eight,
-300: toward
+299: toward
 126: anyone
-277: cat.
-413: overhead.
+276: cat.
+412: overhead.
 176: our
 128: out
 226: throwing
-323: lot
-357: enraged
-436: across
-254: second,
+322: lot
+356: enraged
+435: across
+253: second,
 184: mysterious
-307: get
-363: older
+306: get
+362: older
 151: street.
 109: anywhere.
 183: suggest
 104: opinion
 37: expect
-320: help
+319: help
 170: When
-289: cats
-355: excitedly
-281: road,
+288: cats
+354: excitedly
+280: road,
 93: garden
-342: drummed
+341: drummed
 197: gossiped
 244: first
 100: small
 209: owl
-414: Most
-417: owl-free
-412: sped
+413: Most
+416: owl-free
+411: sped
 142: husband
-261: again.
-398: morning.
+260: again.
+397: morning.
 192: his
-381: few
+380: few
 123: bear
-440: from
-274: light.
+439: from
+273: light.
 233: chortled
 11: WHO
 36: you'd
 119: discover
 22: proud
 168: like
-382: minutes
-332: getups
+381: minutes
+331: getups
 132: sister,
 193: most
-422: important
+421: important
 79: twice
 221: good-bye
-406: did;
+405: did;
 227: cereal
-384: Grunnings
+383: Grunnings
 182: outside
-370: nerve
+369: nerve
 51: nonsense.
-329: who
+328: who
 103: their
 149: Potters
 237: car
-250: cat
-315: else.
-284: said
+249: cat
+314: else.
+283: said
 115: greatest
 81: amount
-401: ing
+400: ing
 86: spent
-316: sat
-321: noticing
-333: saw
+315: sat
+320: noticing
+332: saw
 24: say
 113: also
 143: unDursleyish
-331: clothes
+330: clothes
 180: cloudy
 32: much.
 231: "Little
-283: mirror.
+282: mirror.
 Compressed Data:
 1 2 3 4 5 6 
 7 8 
@@ -477,38 +476,38 @@ Compressed Data:
 230 231 232 233 13 52 84 70 234 4 235 62 236 
 202 192 237 3 238 128 16 17 239 240 
 241 53 96 4 242 16 4 243 25 70 206 4 244 245 16 
-246 247 248 249 55 250 251 55 252 253 55 254 13 52 
-246 47 255 147 70 77 157 249 256 70 257 192 258 259 23 
-246 260 261 262 53 55 263 250 264 96 4 242 16 19 
-246 20 112 105 265 55 266 40 267 268 122 70 72 269 270 
-246 271 241 272 72 269 55 273 16 4 274 13 52 275 3 
-246 276 228 4 277 241 276 278 279 13 52 280 259 4 
-246 242 3 172 4 281 70 282 4 250 40 192 283 241 53 223 
-246 251 4 245 25 284 19 285 249 286 287 228 4 288 289 
-246 290 291 292 43 293 13 52 294 295 55 296 297 3 
-246 298 4 250 128 16 192 299 279 70 280 300 301 70 302 16 
-246 179 303 55 73 304 16 305 70 53 306 23 307 25 308 
-246 309 96 4 310 16 311 305 21 312 128 16 192 313 314 247 
-246 315 279 70 316 40 4 80 317 318 319 70 290 320 
-246 321 25 105 322 23 38 55 323 16 324 325 35 
-246 326 327 40 328 13 52 290 123 35 329 325 40 
-246 330 331 249 4 332 30 333 96 334 335 62 336 337 
-246 53 338 339 340 341 62 342 192 343 96 4 344 
-246 345 3 192 346 347 96 55 348 16 349 350 264 351 
-246 352 353 33 21 354 355 356 13 52 53 
-246 357 23 358 25 55 359 16 205 360 334 228 361 362 25 65 
-246 77 23 38 363 364 70 365 3 366 367 368 369 98 
-246 370 16 371 309 256 124 372 13 52 25 337 53 373 338 
-246 374 375 249 349 35 21 376 377 135 378 
-246 379 25 118 38 120 98 318 380 96 3 55 381 382 383 13 
-246 52 150 40 4 384 385 386 192 313 387 96 61 
-246 13 52 388 316 49 192 387 23 4 389 40 192 390 96 4 
-246 391 392 393 70 394 70 395 72 127 124 396 23 397 
-246 96 305 25 398 62 47 358 4 399 400 401 211 40 402 
-246 403 404 35 405 40 4 243 406 26 407 3 408 
-246 409 410 84 209 411 209 412 413 414 16 205 77 155 
-246 157 367 209 156 228 415 13 15 416 77 55 27 
-246 28 417 398 62 418 228 419 420 421 62 60 
-246 136 422 423 424 3 425 55 426 427 62 53 40 55 
-246 31 161 428 429 430 431 70 302 432 433 192 434 
-246 3 435 436 4 437 23 438 295 55 439 440 4 441 
+246 247 248 55 249 250 55 251 252 55 253 13 52 
+47 254 147 70 77 157 248 255 70 256 192 257 258 23 
+259 260 261 53 55 262 249 263 96 4 242 16 19 
+20 112 105 264 55 265 40 266 267 122 70 72 268 269 
+270 241 271 72 268 55 272 16 4 273 13 52 274 3 
+275 228 4 276 241 275 277 278 13 52 279 258 4 
+242 3 172 4 280 70 281 4 249 40 192 282 241 53 223 
+250 4 245 25 283 19 284 248 285 286 228 4 287 288 
+289 290 291 43 292 13 52 293 294 55 295 296 3 
+297 4 249 128 16 192 298 278 70 279 299 300 70 301 16 
+179 302 55 73 303 16 304 70 53 305 23 306 25 307 
+308 96 4 309 16 310 304 21 311 128 16 192 312 313 246 
+314 278 70 315 40 4 80 316 317 318 70 289 319 
+320 25 105 321 23 38 55 322 16 323 324 35 
+325 326 40 327 13 52 289 123 35 328 324 40 
+329 330 248 4 331 30 332 96 333 334 62 335 336 
+53 337 338 339 340 62 341 192 342 96 4 343 
+344 3 192 345 346 96 55 347 16 348 349 263 350 
+351 352 33 21 353 354 355 13 52 53 
+356 23 357 25 55 358 16 205 359 333 228 360 361 25 65 
+77 23 38 362 363 70 364 3 365 366 367 368 98 
+369 16 370 308 255 124 371 13 52 25 336 53 372 337 
+373 374 248 348 35 21 375 376 135 377 
+378 25 118 38 120 98 317 379 96 3 55 380 381 382 13 
+52 150 40 4 383 384 385 192 312 386 96 61 
+13 52 387 315 49 192 386 23 4 388 40 192 389 96 4 
+390 391 392 70 393 70 394 72 127 124 395 23 396 
+96 304 25 397 62 47 357 4 398 399 400 211 40 401 
+402 403 35 404 40 4 243 405 26 406 3 407 
+408 409 84 209 410 209 411 412 413 16 205 77 155 
+157 366 209 156 228 414 13 15 415 77 55 27 
+28 416 397 62 417 228 418 419 420 62 60 
+136 421 422 423 3 424 55 425 426 62 53 40 55 
+31 161 427 428 429 430 70 301 431 432 192 433 
+3 434 435 4 436 23 437 294 55 438 439 4 440 

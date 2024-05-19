@@ -13,7 +13,7 @@ public class Decompressor {
 
             String line;
             while ((line = reader.readLine()) != null) {
-                if (line.equals("Compressed Data:")) {
+                if (line.equals("Compressed Data:")) { // is used to distinguish between the two sections of the compressed file: the mapping section and the actual compressed data.
                     readingMapping = false;
                     continue;
                 }
@@ -36,6 +36,11 @@ public class Decompressor {
                     }
                     decompressed.append(System.lineSeparator());
                 }
+            }
+
+            // Trim the final line separator for exact match
+            if (decompressed.length() > 0) {
+                decompressed.setLength(decompressed.length() - System.lineSeparator().length());
             }
 
             // Write decompressed data to file

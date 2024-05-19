@@ -23,7 +23,7 @@ public class CompressionControllerMain {
             // Print sizes of the original and compressed files
             long originalSize = Files.size(Paths.get(inputFilePath));
             long compressedSize = Files.size(Paths.get(compressedFilePath));
-            System.out.println("Original file size: " + originalSize + " bytes");
+            System.out.println("Origwinal file size: " + originalSize + " bytes");
             System.out.println("Compressed file size: " + compressedSize + " bytes");
 
             // Print the bytes of the compressed file

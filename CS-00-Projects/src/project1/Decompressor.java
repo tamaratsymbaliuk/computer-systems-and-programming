@@ -38,11 +38,6 @@ public class Decompressor {
                 }
             }
 
-            // Trim the final line separator for exact match
-            if (decompressed.length() > 0) {
-                decompressed.setLength(decompressed.length() - System.lineSeparator().length());
-            }
-
             // Write decompressed data to file
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(decompressedFile))) {
                 writer.write(decompressed.toString());

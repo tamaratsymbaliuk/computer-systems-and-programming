@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class CompressionControllerMain {
+public class CompressionMain {
     public static void main(String[] args) {
         Compressor compressor = new Compressor();
         Decompressor decompressor = new Decompressor();

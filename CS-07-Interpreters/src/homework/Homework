@@ -1,0 +1,43 @@
+9.1 BNF form for extended arithmetic language:
+5 + 6 * 3 - 4 / 2
+
+<expression> ::= <operand> <operator> <operand> <operator> <operand> <operator> <operand><operator> <operand>
+<operator> ::= "+"|"-"|"*"|"/"
+<operand> ::= <integer>
+<integer> ::= [ "-" ] <one_to_nine> { digit }
+<digit> ::= "0" | <one_to_nine>
+<one_to_nine> ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+
+9.2 BNF form for extended arithmetic language:
+5 + 6 * (45 - 3) - 4 / 2
+
+<expression> ::= <operand> <operator> <operand> <operator><factor> <operand> <operator> <operand><factor><operator> <operand>
+<operator> ::= "+"|"-"|"*"|"/"
+<factor> ::= "()"
+<operand> ::= <integer>
+<integer> ::= [ "-" ] <one_to_nine> { digit }
+<digit> ::= "0" | <one_to_nine>
+<one_to_nine> ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+
+9.3 Add power (^) to the previous BNF
+5^3 + 6 * (45 - 3^2) - 4 / 2
+
+<expression> ::= <operand> <operator> <operand> <operator><factor> <operand> <operator> <factor><operand><factor><factor><operator> <operand>
+<operator> ::= "+"|"-"|"*"|"/"
+<factor> ::= "()"|"^"
+<operand> ::= <integer>
+<integer> ::= [ "-" ] <one_to_nine> { digit }
+<digit> ::= "0" | <one_to_nine>
+<one_to_nine> ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+
+9.4 Add support of exponents to our BNF form of a number
+  1.0e-10, -2.71828e-2, 9.81e2
+
+<expression> ::= <operand> "." <variable>
+<operand> ::= <integer>
+<integer> ::= [ "-" ] <one_to_nine> { digit }
+<digit> ::= "0" | <one_to_nine>
+<one_to_nine> ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+<variable> ::= <digit><letter>|"-"|<digit>
+<digit> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+<letter> ::= "e"

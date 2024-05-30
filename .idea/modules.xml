@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/CS-04-Values_and_References/CS-04-Values_and_References.iml" filepath="$PROJECT_DIR$/CS-04-Values_and_References/CS-04-Values_and_References.iml" />
       <module fileurl="file://$PROJECT_DIR$/CS-05-Memory_Stack_Frames/CS-05-Memory_Stack_Frames.iml" filepath="$PROJECT_DIR$/CS-05-Memory_Stack_Frames/CS-05-Memory_Stack_Frames.iml" />
       <module fileurl="file://$PROJECT_DIR$/CS-06-Memory_Types/CS-06-Memory_Types.iml" filepath="$PROJECT_DIR$/CS-06-Memory_Types/CS-06-Memory_Types.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CS-07-Interpreters/CS-07-Interpreters.iml" filepath="$PROJECT_DIR$/CS-07-Interpreters/CS-07-Interpreters.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/computer-systems-and-programming.iml" filepath="$PROJECT_DIR$/.idea/computer-systems-and-programming.iml" />
     </modules>
   </component>

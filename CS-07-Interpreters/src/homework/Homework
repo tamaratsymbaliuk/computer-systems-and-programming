@@ -42,3 +42,11 @@
 <variable> ::= <digit><letter>|"-"|<digit>
 <digit> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
 <letter> ::= "e"
+
+9.6 BNF for part of Python
+
+<expression> ::= <assignment>; | <control structure> | <function>
+<assignment> ::= <identifier> “=” expression
+<identifier> ::= "x" | "y"
+<control structure> ::= "if" |"else"
+ <function> ::= "print"

@@ -23,12 +23,13 @@
 5^3 + 6 * (45 - 3^2) - 4 / 2
 
 <expression> ::= <term> | <expression> "+" <term> | <expression> "-" <term>
-<term> ::= <factor> | <term> "*" <factor> | <term> "/" <factor> | "(" | ")" | "^"
-<factor> ::= <base> | <integer>
-<base> ::= <integer> | <variable> | "(" <expression> ")"
-<integer> ::= [ "-" ] <one_to_nine> { digit }
-<digit> ::= "0" | <one_to_nine>
-<one_to_nine> ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+<term> ::= <factor> | <term> "*" <factor> | <term> "/" <factor>
+<factor> ::= <number> | <power> | "(" expression")"
+<power> ::= <base> "^" <exponent>
+<base> ::= <number> | "("<expression")"
+<exponent> ::= <number> | "("<expression")"
+<number> ::= <digit> | <number> <digit>
+<digit> ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
 
 9.4 Add support of exponents to our BNF form of a number
   1.0e-10, -2.71828e-2, 9.81e2
@@ -42,3 +43,11 @@
 <variable> ::= <digit><letter>|"-"|<digit>
 <digit> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
 <letter> ::= "e"
+
+9.6 BNF for part of Python (identifier ex x = 5)
+
+<expression> ::= <assignment>; | <control structure> | <function>
+<assignment> ::= <identifier> “=” expression
+<identifier> ::= "x" | "y"
+<control structure> ::= "if" |"else"
+ <function> ::= "print"

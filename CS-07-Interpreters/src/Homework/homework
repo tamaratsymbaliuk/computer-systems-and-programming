@@ -67,8 +67,12 @@ ____________updated from the lecture
 
 _____________
 <program> ::= <statement> | <program><separator><statement>
-<statement>::= <expression>
-<separator>::= "\n"|";"
+<statement> ::= <expression> | <if_statement>
+<separator> ::= "\n"|";"
+<if_statement> ::= "if" <condition>"{"<program>"}"<else_statement>?
+<else_statement> ::="else""{"<program>"}"
+<condition> ::= "("<expression><comparison><expression>")"
+<comparison> ::= "<" | ">" |"==" | "<=" |">=" | "!="
 <expression> ::= <term> | <expression> "+" <term> | <expression> "-" <term>
 <term> ::= <factor> | <term> "*" <factor> | <term> "/" <factor>
 <factor> ::= <number> | <identifier> | "(" expression")"

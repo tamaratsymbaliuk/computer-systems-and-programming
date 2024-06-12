@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/CS-06-Memory_Types/CS-06-Memory_Types.iml" filepath="$PROJECT_DIR$/CS-06-Memory_Types/CS-06-Memory_Types.iml" />
       <module fileurl="file://$PROJECT_DIR$/CS-07-Interpreters-I-DSLs/CS-07-Interpreters-I-DSLs.iml" filepath="$PROJECT_DIR$/CS-07-Interpreters-I-DSLs/CS-07-Interpreters-I-DSLs.iml" />
       <module fileurl="file://$PROJECT_DIR$/CS-08-Interpreters-II-Lexers/CS-08-Interpreters-II-Lexers.iml" filepath="$PROJECT_DIR$/CS-08-Interpreters-II-Lexers/CS-08-Interpreters-II-Lexers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CS-09-Interpreters-III-Parsers/CS-09-Interpreters-III-Parsers.iml" filepath="$PROJECT_DIR$/CS-09-Interpreters-III-Parsers/CS-09-Interpreters-III-Parsers.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/computer-systems-and-programming.iml" filepath="$PROJECT_DIR$/.idea/computer-systems-and-programming.iml" />
     </modules>
   </component>

@@ -18,6 +18,7 @@ public class CodingHomeworkLexer implements Iterable<CodingHomeworkLexer.Token> 
         private void tokenize() {
             while (current < input.length()) {
                 char ch = input.charAt(current);
+                System.out.println(ch);
                 switch (ch) {
                     case ' ':
                     case '\t':

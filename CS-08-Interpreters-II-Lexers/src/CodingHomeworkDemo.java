@@ -15,8 +15,8 @@ public class CodingHomeworkDemo {
                 update "status" = "normal load"
                 end
                 """;
-        Lexer lexer = new Lexer(input);
-        for (Lexer.Token token : lexer) {
+        CodingHomeworkLexer lexer = new CodingHomeworkLexer(input);
+        for (CodingHomeworkLexer.Token token : lexer) {
             System.out.println(token);
         }
     }

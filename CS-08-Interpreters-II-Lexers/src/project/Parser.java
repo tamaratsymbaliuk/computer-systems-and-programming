@@ -6,7 +6,13 @@ public class Parser {
 
     }
     class Number extends ASTNode {
+        private final int value;
+        Lexer.Token numberToken;
 
+        public Number(Lexer.Token numberToken) {
+            this.numberToken = numberToken;
+            this.value = Integer.parseInt(numberToken.value);
+        }
     }
 
     class BinaryOp extends ASTNode {

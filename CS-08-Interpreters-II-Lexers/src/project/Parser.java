@@ -3,10 +3,10 @@ package project;
 import java.util.List;
 
 public class Parser {
-    private final List<Lexer.Token> tokens;
+    private final List<Token> tokens;
     private int currentPos;
-    private Lexer.Token currentToken;
-    Parser(List<Lexer.Token> tokens) {
+    private Token currentToken;
+    Parser(List<Token> tokens) {
         this.tokens = tokens;
         currentPos = 0;
         currentToken = tokens.get(currentPos);
@@ -17,14 +17,34 @@ public class Parser {
     }
 
     private ASTNode term() {
-        ASTNode factor = factor();
+        ASTNode node = factor();
 
-        while ()
+        while (currentToken != null && (currentToken.type == Token.Type.MULTIPLY || currentToken.type == Token.Type.DIVIDE)) {
+            Token token = currentToken;
+            consume(currentToken.type);
+            node = new BinaryOpNode(node, factor(), token);
+        }
+        return node;
+    }
 
+    private void consume(Token.Type type) {
+        if (currentToken.type == type) {
+            currentPos++;
+            if (currentPos < tokens.size()) {
+                currentToken = tokens.get(currentPos);
+            } else {
+                currentToken = null;
+            }
+
+        } else {
+            throw new ParserException("Unexpected token: " + type);
+        }
     }
 
     private ASTNode factor() {
-        return null;
+        Token token = currentToken;
+        consume(Token.Type.NUMBER);
+        return new NumberNode(token);
     }
 
 }

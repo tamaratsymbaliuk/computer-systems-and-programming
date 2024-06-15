@@ -15,12 +15,14 @@ public class Lexer implements Iterable<Token> {
     public static List<Token> getHardcodedTokens() {
         return Arrays.asList(
                 new Token(NUMBER, "3"),
-                new Token(MULTIPLY, "*"),
+                new Token(PLUS, "+"),
                 new Token(NUMBER, "5"),
                 new Token(MULTIPLY, "*"),
+                new Token(LPAREN, "("),
                 new Token(NUMBER, "10"),
-                new Token(MULTIPLY, "*"),
-                new Token(NUMBER, "4")
+                new Token(MINUS, "-"),
+                new Token(NUMBER, "4"),
+                new Token(RPAREN, ")")
 
         );
 

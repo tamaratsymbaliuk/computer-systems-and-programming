@@ -134,7 +134,7 @@ public class Lexer implements Iterable<Lexer.Token> {
         return tokens.iterator();
     }
 
-    static class Token {
+    public static class Token {
         final TokenType type;
         final String value;
 

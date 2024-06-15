@@ -1,14 +1,31 @@
 package project;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
-public class Lexer implements Iterable<Lexer.Token> {
+import static project.Token.Type.*;
+
+public class Lexer implements Iterable<Token> {
     private final String input;
     private final List<Token> tokens;
     private int current;
 
+    public static List<Token> getHardcodedTokens() {
+        return Arrays.asList(
+                new Token(NUMBER, "3"),
+                new Token(MULTIPLY, "*"),
+                new Token(NUMBER, "5"),
+                new Token(MULTIPLY, "*"),
+                new Token(NUMBER, "10"),
+                new Token(MULTIPLY, "*"),
+                new Token(NUMBER, "4")
+
+        );
+
+
+    }
     public Lexer(String input) {
         this.input = input;
         this.tokens = new ArrayList<Token>();
@@ -28,26 +45,26 @@ public class Lexer implements Iterable<Lexer.Token> {
                     current++;
                     break;
                 case '=':
-                    tokens.add(new Token(TokenType.ASSIGNMENT, "="));
+                    tokens.add(new Token(ASSIGNMENT, "="));
                     current++;
                     break;
                 case '+':
                 case '-':
                 case '*':
                 case '/':
-                    tokens.add(new Token(TokenType.OPERATOR,Character.toString(ch)));
+                    tokens.add(new Token(OPERATOR,Character.toString(ch)));
                     current++;
                     break;
                 case '"':
-                    tokens.add(new Token(TokenType.STRING, readString()));
+                    tokens.add(new Token(STRING, readString()));
                     current++;
                     break;
                 case '%':
-                    tokens.add(new Token(TokenType.REFERENCES, readReference()));
+                    tokens.add(new Token(REFERENCES, readReference()));
                     break;
                 default:
                     if (isDigit(ch)) {
-                        tokens.add(new Token(TokenType.NUMBER, readNumber()));
+                        tokens.add(new Token(NUMBER, readNumber()));
                     } else if (isAlpha(ch)) {
                         String identifier = readIdentifier();
                         tokens.add(new Token(deriveTokenType(identifier), identifier));
@@ -64,14 +81,14 @@ public class Lexer implements Iterable<Lexer.Token> {
 
     }
 
-    private TokenType deriveTokenType(String identifier) {
+    private Token.Type deriveTokenType(String identifier) {
         return switch (identifier) {
-            case "config" -> TokenType.CONFIG;
-            case "update" -> TokenType.UPDATE;
-            case "compute" -> TokenType.COMPUTE;
-            case "show" -> TokenType.SHOW;
-            case "configs" -> TokenType.CONFIGS;
-            default -> TokenType.IDENTIFIER;
+            case "config" -> CONFIG;
+            case "update" -> UPDATE;
+            case "compute" -> COMPUTE;
+            case "show" -> SHOW;
+            case "configs" -> CONFIGS;
+            default -> IDENTIFIER;
         };
     }
 
@@ -107,7 +124,7 @@ public class Lexer implements Iterable<Lexer.Token> {
     }
 
     private boolean isAlphaNumeric(char c) {
-        return isAlpha(c) | isDigit(c);
+        return isAlpha(c) || isDigit(c);
     }
 
     private boolean isAlpha(char c) {
@@ -134,28 +151,10 @@ public class Lexer implements Iterable<Lexer.Token> {
         return tokens.iterator();
     }
 
-    public static class Token {
-        final TokenType type;
-        final String value;
 
-         Token(TokenType type, String value) {
-            this.type = type;
-            this.value = value;
-        }
-
-        @Override
-        public String toString() {
-            return "Token{" +
-                    "type=" + type +
-                    ", value='" + value + '\'' +
-                    '}';
-        }
-
-    }
-    enum TokenType {
-        CONFIG, UPDATE, COMPUTE, SHOW, CONFIGS, STRING, NUMBER, IDENTIFIER, ASSIGNMENT, REFERENCES, OPERATOR
 
     }
 
 
-}
+
+

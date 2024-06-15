@@ -1,3 +1,7 @@
+package project;
+
+import project.CodingHomeworkLexer;
+
 public class CodingHomeworkDemo {
     public static void main(String[] args) {
 

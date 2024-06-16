@@ -23,5 +23,9 @@ public class CodingHomeworkDemo {
         for (CodingHomeworkLexer.Token token : lexer) {
             System.out.println(token);
         }
+        CodingHomeworkParser parser = new CodingHomeworkParser(lexer.getTokens());
+        ASTNode root = parser.parse();
+
+        root.print("   ");
     }
 }

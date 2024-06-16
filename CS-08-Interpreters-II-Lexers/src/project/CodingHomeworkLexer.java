@@ -20,7 +20,7 @@ public class CodingHomeworkLexer implements Iterable<CodingHomeworkLexer.Token> 
         private void tokenize() {
             while (current < input.length()) {
                 char ch = input.charAt(current);
-                System.out.println(ch);
+               // System.out.println(ch);
                 switch (ch) {
                     case ' ':
                     case '\t':
@@ -142,6 +142,9 @@ public class CodingHomeworkLexer implements Iterable<CodingHomeworkLexer.Token> 
         public Iterator<Token> iterator() {
             return tokens.iterator();
         }
+        public List<Token> getTokens() {
+        return tokens;
+    }
 
         static class Token {
             final TokenType type;
@@ -163,7 +166,7 @@ public class CodingHomeworkLexer implements Iterable<CodingHomeworkLexer.Token> 
         }
         enum TokenType {
             CONFIG, UPDATE, COMPUTE, SHOW, CONFIGS, STRING, NUMBER, IDENTIFIER, ASSIGNMENT, REFERENCES, OPERATOR, LOOP,
-            FROM, TO, END, IF, ELSE
+            FROM, TO, END, IF, ELSE, PLUS, MINUS, MULTIPLY, DIVIDE, LPAREN, RPAREN
 
         }
 

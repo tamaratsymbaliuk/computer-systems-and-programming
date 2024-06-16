@@ -49,7 +49,7 @@ public class Parser {
             }
 
         } else {
-            throw new ParserException("Unexpected token: " + type);
+            throw new ParserException("Unexpected token: " + currentToken + " expected: " + type);
         }
     }
 

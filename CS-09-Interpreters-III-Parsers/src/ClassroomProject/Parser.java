@@ -1,5 +1,6 @@
 package ClassroomProject;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Parser {
@@ -13,7 +14,45 @@ public class Parser {
     }
 
     public ASTNode parse() {
+        List<ASTNode> statements = new ArrayList<>();
+        while (currentToken != null){
+            statements.add(statement());
+            if (currentToken != null && currentToken.type == Token.Type.SEMICOLON) {
+                consume(currentToken.type);
+            }
+        }
+        return new Block(statements);
+    }
+
+    private ASTNode statement() {
+        if (currentToken.type == Token.Type.LBRACE) {// block is starting
+            return block();
+        }
+        if (currentToken.type == Token.Type.VAR) { // starts declaration
+            return declaration();
+        }
+        if (currentToken.type == Token.Type.IDENTIFIER) { // starts assignment
+            return assignment();
+        }
         return expression();
+    }
+
+    private ASTNode declaration() {
+        consume(Token.Type.VAR);
+        return null;
+    }
+
+    private ASTNode block() {
+        consume(Token.Type.LBRACE);
+        ArrayList<ASTNode> statements = new ArrayList<>();
+        while (currentToken.type != Token.Type.RBRACE) {
+            statements.add(statement());
+            if (currentToken.type == Token.Type.SEMICOLON) {
+                consume(currentToken.type);
+            }
+        }
+        consume(Token.Type.RBRACE);
+        return new Block(statements);
     }
 
     private ASTNode expression() {

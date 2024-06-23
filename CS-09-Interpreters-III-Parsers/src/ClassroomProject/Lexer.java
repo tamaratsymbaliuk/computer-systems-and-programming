@@ -47,7 +47,7 @@ public class Lexer implements Iterable<Token> {
                     current++;
                     break;
                 case '=':
-                    tokens.add(new Token(ASSIGNMENT, "="));
+                    tokens.add(new Token(ASSIGN, "="));
                     current++;
                     break;
                 case '{':
@@ -67,13 +67,15 @@ public class Lexer implements Iterable<Token> {
                     current++;
                     break;
                 case ':':
+                case ';':
                     tokens.add(new Token(SEMICOLON, ":"));
                     current++;
                     break;
-                case ';':
+                /*case ';':
                     tokens.add(new Token(COLON, ";"));
                     current++;
                     break;
+                 */
                 case '+':
                 case '-':
                 case '*':
@@ -114,6 +116,7 @@ public class Lexer implements Iterable<Token> {
             case "compute" -> COMPUTE;
             case "show" -> SHOW;
             case "configs" -> CONFIGS;
+            case "var" -> VAR;
             default -> IDENTIFIER;
         };
     }

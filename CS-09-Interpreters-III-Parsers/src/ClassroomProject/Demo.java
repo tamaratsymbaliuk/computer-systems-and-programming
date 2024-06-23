@@ -16,16 +16,19 @@ public class Demo {
             System.out.println(token);
         }
         System.out.println("Second example");
-        String input1 = """
+        /*String input1 = """
                 3 * 5 * 10 * 4
                 """;
         Lexer lexer1 = new Lexer(input1);
+
+         */
         List<Token> tokens = Lexer.getHardcodedTokens();
         // List<Token> tokens = new ArrayList<Token>();
-        for (Token token: lexer1) {
+        /*for (Token token: lexer1) {
             //   tokens.add(token);
             System.out.println(token);
-        }
+        }*/
+
         Parser parser = new Parser(tokens);
         ASTNode root = parser.parse();
 

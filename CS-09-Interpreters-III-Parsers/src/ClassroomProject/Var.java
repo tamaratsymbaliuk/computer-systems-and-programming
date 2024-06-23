@@ -6,7 +6,7 @@ public class Var extends  ASTNode {
     Token token;
     String name;
 
-    Var(Token token) {
+   public Var(Token token) {
         this.token = token;
         this.name = token.value;
     }

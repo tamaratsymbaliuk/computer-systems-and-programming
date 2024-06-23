@@ -50,6 +50,30 @@ public class Lexer implements Iterable<Token> {
                     tokens.add(new Token(ASSIGNMENT, "="));
                     current++;
                     break;
+                case '{':
+                    tokens.add(new Token(LBRACE, "{"));
+                    current++;
+                    break;
+                case '}':
+                    tokens.add(new Token(RBRACE, "}"));
+                    current++;
+                    break;
+                case '(':
+                    tokens.add(new Token(RPAREN, "("));
+                    current++;
+                    break;
+                case ')':
+                    tokens.add(new Token(LPAREN, ")"));
+                    current++;
+                    break;
+                case ':':
+                    tokens.add(new Token(SEMICOLON, ":"));
+                    current++;
+                    break;
+                case ';':
+                    tokens.add(new Token(COLON, ";"));
+                    current++;
+                    break;
                 case '+':
                 case '-':
                 case '*':
@@ -153,6 +177,8 @@ public class Lexer implements Iterable<Token> {
         return tokens.iterator();
     }
 
-
+    public List<Token> getTokens() {
+        return tokens;
+    }
 
 }

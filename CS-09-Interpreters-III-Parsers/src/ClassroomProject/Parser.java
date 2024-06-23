@@ -37,9 +37,24 @@ public class Parser {
         return expression();
     }
 
+    private ASTNode assignment() {
+        Var varNode = var(); // identifier
+        consume(Token.Type.ASSIGN);// =
+        //ASTNode right = expression();
+        return new Assign(varNode, expression());
+    }
+
     private ASTNode declaration() {
-        consume(Token.Type.VAR);
-        return null;
+        consume(Token.Type.VAR); // var
+        Var varNode = var(); // identifier
+        consume(Token.Type.ASSIGN); // =
+        return new VarDecl(varNode, expression()); // expr
+    }
+
+    private Var var() {
+        Token token = currentToken; // x
+        consume(Token.Type.IDENTIFIER); 
+        return new Var(token);
     }
 
     private ASTNode block() {

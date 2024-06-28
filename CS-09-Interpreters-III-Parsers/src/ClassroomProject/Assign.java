@@ -1,8 +1,8 @@
 package ClassroomProject;
 
 public class Assign extends ASTNode {
-    Var left;
-    ASTNode right;
+    public Var left;
+    public ASTNode right;
 
     Assign (Var left, ASTNode right) {
         this.left = left;

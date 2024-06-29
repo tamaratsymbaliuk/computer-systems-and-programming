@@ -32,6 +32,7 @@ public class Demo {
         int result = interpreter.visit(root);
         System.out.println("Interpretation result: " + result);
 
+
     }
 
 }

@@ -47,17 +47,16 @@ public class Interpreter {
             int rightExpressionResult = visit(varDecl.expr);
             valueTable.put(varDecl.varNode.name, rightExpressionResult);
             return rightExpressionResult;
-
-
             } else if (node instanceof Var var) {
             String varName = var.name;
             if (!valueTable.containsKey(varName)) {
                 throw new ParserException("Variable not found: " + varName);
             }
             return valueTable.get(varName);
-
         } else if (node instanceof Assign assignNode) {
-
+            int rightExpressionResult = visit(assignNode.right);
+            valueTable.put(assignNode.left.name, rightExpressionResult);
+            return rightExpressionResult;
         } else if (node instanceof Block block) {
             int result = 0;
             for (ASTNode statement: block.statements) {

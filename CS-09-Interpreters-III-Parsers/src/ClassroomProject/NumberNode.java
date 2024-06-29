@@ -1,7 +1,7 @@
 package ClassroomProject;
 
 public class NumberNode extends ASTNode {
-    final int value;
+    public final int value;
     Token numberToken;
 
     public NumberNode(Token numberToken) {

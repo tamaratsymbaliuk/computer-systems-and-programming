@@ -44,7 +44,9 @@ public class Interpreter {
             return numberNode.value;
 
         } else if (node instanceof VarDecl varDecl) {
-            valueTable.put(varDecl.varNode.name, visit(varDecl.expr));
+            int rightExpressionResult = visit(varDecl.expr);
+            valueTable.put(varDecl.varNode.name, rightExpressionResult);
+            return rightExpressionResult;
 
 
             } else if (node instanceof Var var) {

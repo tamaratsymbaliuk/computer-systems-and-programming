@@ -10,6 +10,7 @@ public class Demo {
                 var x = 6;
                 {
                 var y = 4;
+                y = 5;
                 }
                 }
                 """;
@@ -21,6 +22,15 @@ public class Demo {
         Parser parser = new Parser(tokens);
         ASTNode root = parser.parse();
         root.print("   ");
+
+        // Adding SemanticAnalyzer
+        SemanticAnalyzer semanticAnalyzer = new SemanticAnalyzer();
+        semanticAnalyzer.visit(root);
+
+        // Adding Interpreter
+        Interpreter interpreter = new Interpreter();
+        int result = interpreter.visit(root);
+        System.out.println("Interpretation result: " + result);
 
     }
 

@@ -31,8 +31,6 @@ public class Demo {
         Interpreter interpreter = new Interpreter();
         int result = interpreter.visit(root);
         System.out.println("Interpretation result: " + result);
-
-
     }
 
 }

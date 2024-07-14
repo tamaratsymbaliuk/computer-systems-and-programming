@@ -1,6 +1,6 @@
 package BankSystemHW;
 
-public abstract class Account {
+public abstract class Account implements AccountOperations {
 
     private String accountNumber;
     private double balance;

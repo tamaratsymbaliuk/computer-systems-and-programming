@@ -6,4 +6,14 @@ public class CheckingAccount extends Account{
         super(accountNumber, balance);
         this.overdraftLimit = overdraftLimit;
     }
+
+    @Override
+    public void deposit(double amount) {
+
+    }
+
+    @Override
+    public void withdraw(double amount) {
+
+    }
 }

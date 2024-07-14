@@ -8,12 +8,12 @@ public class CheckingAccount extends Account{
     }
 
     @Override
-    public void deposit(double amount) {
-
-    }
-
-    @Override
     public void withdraw(double amount) {
-
+        if (amount > 0 && amount <= getBalance() + overdraftLimit) {
+            super.withdraw(amount); //the super keyword is used to call the withdraw method from the superclass Account. This is necessary because the CheckingAccount class extends the Account class and overrides the withdraw method to add additional behavior (checking the overdraft limit).
+        } else {
+            System.out.println("Insufficient balance or overdraft limit exceeded.");
+        }
     }
+
 }

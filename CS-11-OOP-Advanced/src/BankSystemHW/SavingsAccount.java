@@ -7,13 +7,9 @@ public class SavingsAccount extends Account {
         this.interestRate = interestRate;
     }
 
-    @Override
-    public void deposit(double amount) {
-
-    }
-
-    @Override
-    public void withdraw(double amount) {
-
+    public void applyInterest() {
+        double interest = getBalance() * interestRate;
+        deposit(interest);
+        System.out.println("Interest applied: " + interest + ". New balance: " + getBalance());
     }
 }

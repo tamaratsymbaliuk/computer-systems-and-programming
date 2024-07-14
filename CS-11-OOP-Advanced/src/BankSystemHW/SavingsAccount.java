@@ -6,4 +6,14 @@ public class SavingsAccount extends Account {
         super(accountNumber, balance);
         this.interestRate = interestRate;
     }
+
+    @Override
+    public void deposit(double amount) {
+
+    }
+
+    @Override
+    public void withdraw(double amount) {
+
+    }
 }

@@ -12,4 +12,8 @@ public class SavingsAccount extends Account {
         deposit(interest);
         System.out.println("Interest applied: " + interest + ". New balance: " + getBalance());
     }
+    @Override
+    public String toString() {
+        return "SavingsAccount(" + getAccountNumber() + ", Balance: " + getBalance() + ", InterestRate: " + interestRate + "%)";
+    }
 }

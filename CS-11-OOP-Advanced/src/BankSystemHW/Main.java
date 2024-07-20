@@ -16,9 +16,12 @@ public class Main {
         checkingAccount.withdraw(600);
         checkingAccount.withdraw(500);  // Exceeds overdraft limit
 
+        // Change PIN
+        savingsAccount.changePin(null,"1234");  // Setting initial PIN
+        savingsAccount.changePin("1234", "5678");
+
         // Display customer and accounts
         System.out.println(customer);
-        System.out.println(savingsAccount);
-        System.out.println(checkingAccount);
+        customer.viewAccounts();
     }
 }

@@ -42,6 +42,8 @@ public abstract class Account implements AccountOperations {
     public boolean verifyPin(String pin) {
         return this.pin != null && this.pin.equals(pin);
     }
+
+    @Override
     public void changePin(String oldPin, String newPin) {
         if (verifyPin(oldPin)) {
             this.pin = newPin;

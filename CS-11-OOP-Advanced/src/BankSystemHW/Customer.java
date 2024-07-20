@@ -18,6 +18,10 @@ public class Customer implements CustomerOperations {
         return name;
     }
 
+    public List<Account> getAccounts() {
+        return accounts;
+    }
+
     @Override
     public void addAccount(Account account) {
         accounts.add(account);
@@ -28,6 +32,13 @@ public class Customer implements CustomerOperations {
     public void removeAccount(Account account) {
         accounts.remove(account);
         System.out.println("Account " + account + " removed from customer " + name + ".");
+    }
+
+    public void viewAccounts() {
+        for (Account account: accounts) {
+            System.out.println("List of accounts: " + account);
+        }
+
     }
 
     public String toString() {

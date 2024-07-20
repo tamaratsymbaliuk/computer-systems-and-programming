@@ -15,5 +15,9 @@ public class CheckingAccount extends Account{
             System.out.println("Insufficient balance or overdraft limit exceeded.");
         }
     }
+    @Override
+    public String toString() {
+        return "CheckingAccount(" + getAccountNumber() + ", Balance: " + getBalance() + ", OverdraftLimit: " + overdraftLimit + ")";
+    }
 
 }

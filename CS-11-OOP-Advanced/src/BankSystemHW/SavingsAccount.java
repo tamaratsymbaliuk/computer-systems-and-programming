@@ -6,7 +6,6 @@ public class SavingsAccount extends Account {
         super(accountNumber, balance);
         this.interestRate = interestRate;
     }
-
     public void applyInterest() {
         double interest = getBalance() * interestRate;
         deposit(interest);

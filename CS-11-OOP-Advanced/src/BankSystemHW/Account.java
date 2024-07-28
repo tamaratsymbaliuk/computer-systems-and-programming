@@ -51,7 +51,7 @@ public abstract class Account implements AccountOperations {
         } else {
             System.out.println("Incorrect old PIN.");
         }
-        }
+    }
 
     @Override
     public void deposit(double amount) {

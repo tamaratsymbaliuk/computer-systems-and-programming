@@ -57,7 +57,9 @@ public abstract class Account implements AccountOperations {
     public void deposit(double amount) {
         if (amount > 0) {
             balance += amount;
-            System.out.println("Deposited " + amount + ". New balance: " + balance);
+            String transaction = "Deposited " + amount + ". New balance: " + balance;
+            addTransaction(transaction);
+            System.out.println(transaction);
         } else {
             System.out.println("Deposit amount must be positive.");
         }
@@ -67,7 +69,9 @@ public abstract class Account implements AccountOperations {
     public void withdraw(double amount) {
         if(amount > 0 && amount <= balance) {
             balance -= amount;
-            System.out.println("Withdrew " + amount + ". New balance: " + balance);
+            String transaction = "Withdrew " + amount + ". New balance: " + balance;
+            addTransaction(transaction);
+            System.out.println(transaction);
         } else {
             System.out.println("Insufficient balance or invalid amount.");
         }

@@ -8,9 +8,14 @@ public class SavingsAccount extends Account {
     }
     public void applyInterest() {
         double interest = getBalance() * interestRate;
-        deposit(interest);
-        System.out.println("Interest applied: " + interest + ". New balance: " + getBalance());
+        try {
+            deposit(interest);
+            System.out.println("Interest applied: " + interest + ". New balance: " + getBalance());
+        } catch (NegativeAmountException e) {
+            System.out.println("Error applying interest: " + e.getMessage());
+        }
     }
+
     @Override
     public String toString() {
         return "SavingsAccount(" + getAccountNumber() + ", Balance: " + getBalance() + ", InterestRate: " + interestRate + "%)";

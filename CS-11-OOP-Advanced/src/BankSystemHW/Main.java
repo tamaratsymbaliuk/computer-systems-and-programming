@@ -9,16 +9,23 @@ public class Main {
 
         customer.addAccount(savingsAccount);
         customer.addAccount(checkingAccount);
-        // Perform operations
-        savingsAccount.deposit(500);
-        savingsAccount.applyInterest();
+        try {
+            // Perform operations
+            savingsAccount.deposit(500);
+            savingsAccount.applyInterest();
 
-        checkingAccount.withdraw(600);
-        checkingAccount.withdraw(500);  // Exceeds overdraft limit
+            checkingAccount.withdraw(600);
+            checkingAccount.withdraw(500);  // Exceeds overdraft limit
 
-        // Change PIN
-        savingsAccount.changePin(null,"1234");  // Setting initial PIN
-        savingsAccount.changePin("1234", "5678");
+            // Change PIN
+            savingsAccount.changePin(null, "1234");  // Setting initial PIN
+            savingsAccount.changePin("1234", "5678");
+        } catch (NegativeAmountException | InsufficientFundsException | InvalidPinException e) {
+            System.out.println("Error: " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Unexpected error occurred: " + e.getMessage());
+        }
+
 
         // Display customer and accounts
         System.out.println(customer);

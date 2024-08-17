@@ -40,6 +40,22 @@ public class Customer implements CustomerOperations {
         }
 
     }
+    public void performDeposit(Account account, double amount) {
+        try {
+            account.deposit(amount);
+        } catch (NegativeAmountException e) {
+            System.out.println("Error during deposit: " + e.getMessage());
+        }
+    }
+
+    public void performWithdrawal(Account acccount, double amount) {
+        try {
+            acccount.withdraw(amount);
+        } catch (InsufficientFundsException | NegativeAmountException e) {
+            System.out.println("Error during withdrawal: " + e.getMessage());
+        }
+    }
+
 
     public String toString() {
         return "Customer(" + name + ", ID: " + customerId + ")";

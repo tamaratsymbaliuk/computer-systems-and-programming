@@ -3,6 +3,7 @@ package BankSystemHW;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 
 public class Customer implements CustomerOperations {
     private String name;
@@ -66,6 +67,23 @@ public class Customer implements CustomerOperations {
         System.out.println("Accounts sorted by type:");
         viewAccounts();
     }
+    public void displayHighBalanceAccounts(double threshold) {
+        accounts.stream()
+                .filter(account -> account.getBalance() > threshold)
+                .forEach(account -> System.out.println(account));
+    }
+    public double totalBalance(){
+        return accounts.stream()
+                .mapToDouble(Account::getBalance)
+                .sum();
+    }
+    public Optional<Account> findAccountByNumber(String accountNumber) {
+        return accounts.stream()
+                .filter(account -> account.getAccountNumber().equals(accountNumber))
+                .findFirst();
+    }
+
+
 
 
 

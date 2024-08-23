@@ -1,15 +1,23 @@
 package enums;
 
 public class LevelDemo {
-    Level myVar = Level.MEDIUM; // access one enum
 
     public static void main(String[] args) {
+        Level myVar = Level.MEDIUM; // access one enum
 
 
-        for (Level myVar : Level.values()) { // loop through all enum values
-            System.out.println(myVar);
+       switch (myVar) {
+           case LOW:
+               System.out.println("Low level");
+               break;
+           case MEDIUM:
+               System.out.println("Medium level");
+               break;
+           case HIGH:
+               System.out.println("High level");
+               break;
 
-        }
+       }
     }
 }
 

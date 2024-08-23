@@ -9,23 +9,33 @@ public abstract class Account implements AccountOperations {
     private double balance;
     private String pin;
     private List<String> transactionHistory;
+    private AccountType accountType;
 
-    public Account(String accountNumber, double balance) {
+    public Account(String accountNumber, double balance, AccountType accountType) {
         this.accountNumber = accountNumber;
         this.balance = balance;
         this.transactionHistory = new ArrayList<>();
+        this.accountType = accountType;
     }
 
-    public Account(String accountNumber, double balance, String pin) {
-        this(accountNumber, balance);
+    public Account(String accountNumber, double balance, String pin, AccountType accountType) {
+        this(accountNumber, balance, accountType);
         this.pin = pin;
     }
-    public Account(String accountNumber) {
-        this(accountNumber, 0.0);
+    public Account(String accountNumber, AccountType accountType) {
+        this(accountNumber, 0.0, accountType);
     }
 
     public double getBalance() {
         return balance;
+    }
+
+    public String getPin() {
+        return pin;
+    }
+
+    public AccountType getAccountType() {
+        return accountType;
     }
 
     public String getAccountNumber() {

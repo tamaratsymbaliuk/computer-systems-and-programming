@@ -1,6 +1,7 @@
 package BankSystemHW;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Customer implements CustomerOperations {
@@ -55,6 +56,17 @@ public class Customer implements CustomerOperations {
             System.out.println("Error during withdrawal: " + e.getMessage());
         }
     }
+    public void sortAccountByBalance() {
+        accounts.sort(Comparator.comparingDouble(Account::getBalance));
+        System.out.println("Accounts sorted by balance:");
+        viewAccounts();
+    }
+    public void sortAccountsByType() {
+        accounts.sort(Comparator.comparing(Account::getAccountType));
+        System.out.println("Accounts sorted by type:");
+        viewAccounts();
+    }
+
 
 
     public String toString() {

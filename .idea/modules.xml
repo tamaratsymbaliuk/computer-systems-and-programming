@@ -16,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/CS-11-OOP-Advanced/CS-11-OOP-Advanced.iml" filepath="$PROJECT_DIR$/CS-11-OOP-Advanced/CS-11-OOP-Advanced.iml" />
       <module fileurl="file://$PROJECT_DIR$/CS-12-UML-Diagrams/CS-12-UML-Diagrams.iml" filepath="$PROJECT_DIR$/CS-12-UML-Diagrams/CS-12-UML-Diagrams.iml" />
       <module fileurl="file://$PROJECT_DIR$/CS-13-Exceptions/CS-13-Exceptions.iml" filepath="$PROJECT_DIR$/CS-13-Exceptions/CS-13-Exceptions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CS-14-Java-Collections-Enums-Lambda/CS-14-Java-Collections-Enums-Lambda.iml" filepath="$PROJECT_DIR$/CS-14-Java-Collections-Enums-Lambda/CS-14-Java-Collections-Enums-Lambda.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/computer-systems-and-programming.iml" filepath="$PROJECT_DIR$/.idea/computer-systems-and-programming.iml" />
     </modules>
   </component>

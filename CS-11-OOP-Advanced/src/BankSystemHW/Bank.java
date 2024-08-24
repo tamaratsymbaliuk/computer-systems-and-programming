@@ -13,5 +13,9 @@ public class Bank {
         customers.put(customer.getCustomerId(), customer);
         System.out.println("Customer " + customer + " added to the bank.");
     }
+    public Customer getCustomerById(String customerId) {
+        return customers.get(customerId);
+    }
+
 
 }

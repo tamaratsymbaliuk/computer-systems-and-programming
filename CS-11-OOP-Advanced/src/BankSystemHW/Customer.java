@@ -24,6 +24,10 @@ public class Customer implements CustomerOperations {
         return accounts;
     }
 
+    public String getCustomerId() {
+        return customerId;
+    }
+
     @Override
     public void addAccount(Account account) {
         accounts.add(account);

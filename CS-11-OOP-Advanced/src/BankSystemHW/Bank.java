@@ -16,6 +16,10 @@ public class Bank {
     public Customer getCustomerById(String customerId) {
         return customers.get(customerId);
     }
+    public void removeCustomer(String customerId) {
+        customers.remove(customerId);
+        System.out.println("Customer with ID " + customerId + " removed from the bank.");
+    }
 
 
 }

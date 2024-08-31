@@ -20,5 +20,4 @@ public class Bank {
         customers.remove(customerId);
         System.out.println("Customer with ID " + customerId + " removed from the bank.");
     }
-
 }
